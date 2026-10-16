@@ -2,7 +2,7 @@
 
 Vor der Abgabe ausfüllen und committen. Ablauf: [Abgabeanleitung](docs/ABGABE.md).
 
-**Moodle-Gruppe (A, B, C oder G):** noch ausfüllen
+**Moodle-Gruppe (A, B, C oder G):** C
 
 ## Mitglieder
 
