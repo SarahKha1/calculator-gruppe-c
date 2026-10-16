@@ -7,11 +7,11 @@ Vor der Abgabe ausfüllen und committen. Ablauf: [Abgabeanleitung](docs/ABGABE.m
 ## Mitglieder
 
 | GitHub-Benutzername | Arbeitsteam beim Einstieg (1 oder 2) |
-|  | --- |
-| AdeaB5 | noch ausfüllen |
-| RamzyYoussef | noch ausfüllen |
-| SarahKha1 | noch ausfüllen |
-| noch ausfüllen | noch ausfüllen |
+|-----------|--------------------------------------|
+| Adea5B    | 1                                    |
+| RamzyYoussef | 2                                    |
+| SarahKha1 | 1                                    |
+| noch ausfüllen | 2                                    |
 
 Gruppe G ergänzt eine fünfte Zeile. Nennt alle Mitglieder und dokumentiert unten
 auch die wechselnde Besetzung des Zweier- und Dreierteams.
