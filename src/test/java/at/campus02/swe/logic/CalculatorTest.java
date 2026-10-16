@@ -83,5 +83,55 @@ public class CalculatorTest {
             // e.getCause()
         }
 
+
+
     }
+
+    @Test
+    public void testModuloOperation() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(7);
+        calc.push(3);
+
+        double result = calc.perform(Operation.mod);
+
+        assertEquals(1, result, 0);
+    }
+
+    @Test
+    public void testModuloWithoutRemainder() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(8);
+        calc.push(4);
+
+        double result = calc.perform(Operation.mod);
+
+        assertEquals(0, result, 0);
+    }
+
+    @Test
+    public void testModuloWithNegativeNumber() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(-7);
+        calc.push(3);
+
+        double result = calc.perform(Operation.mod);
+
+        assertEquals(-1, result, 0);
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testModuloByZero() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(7);
+        calc.push(0);
+
+        calc.perform(Operation.mod);
+    }
+
+
 }

@@ -21,9 +21,9 @@ Vollständige Namen und die Zuordnung zu den GitHub-Benutzernamen meldet ihr in 
 
 Status: noch nicht freigegeben, in Arbeit oder erledigt.
 
-| Aufgabe | Status | Issues / Pull Requests | Neue Tests bzw. CI-Nachweis |
-| --- | --- | --- | --- |
-| 1: Modulo | noch ausfüllen | noch ausfüllen | noch ausfüllen |
+| Aufgabe | Status   | Issues / Pull Requests | Neue Tests bzw. CI-Nachweis |
+| --- |----------| --- | --- |
+| 1: Modulo | erledigt | noch ausfüllen | noch ausfüllen |
 | 2: E2E-Tests | noch ausfüllen | noch ausfüllen | noch ausfüllen |
 | 3: sin/cos | noch ausfüllen | noch ausfüllen | noch ausfüllen |
 | 4: Skalarprodukt | noch ausfüllen | noch ausfüllen | noch ausfüllen |
