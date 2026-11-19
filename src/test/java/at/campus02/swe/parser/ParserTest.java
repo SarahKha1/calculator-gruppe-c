@@ -74,5 +74,6 @@ public class ParserTest {
                 new File("src/test/resources/dotproduct-length-one.xml"));
 
         org.junit.Assert.assertEquals(6.0, result, 1e-9);
+
     }
 }
