@@ -133,5 +133,32 @@ public class CalculatorTest {
         calc.perform(Operation.mod);
     }
 
+    @Test(expected = CalculatorException.class)
+    public void testDotProductRejectsFractionalLength() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(2);
+        calc.push(3);
+        calc.push(1.5);
+
+        calc.perform(Operation.dotproduct);
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testDotProductRejectsMissingVectorValues() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        calc.push(1);
+        calc.push(3);
+        calc.push(2);
+        calc.push(2);
+
+        calc.perform(Operation.dotproduct);
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testDotProductRejectsEmptyStack() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.perform(Operation.dotproduct);
+    }
 
 }

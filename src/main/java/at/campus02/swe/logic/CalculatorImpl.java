@@ -12,6 +12,9 @@ public class CalculatorImpl implements Calculator {
 
     @Override
     public double perform(Operation op) throws CalculatorException {
+        if (op == Operation.dotproduct) {
+            return performDotProduct();
+        }
 
         double b = pop();
         double a = pop();
@@ -52,6 +55,36 @@ public class CalculatorImpl implements Calculator {
     @Override
     public void clear() {
         stack_.clear();
+    }
+
+    private double performDotProduct() throws CalculatorException {
+        double rawLength = pop();
+
+        if (!Double.isFinite(rawLength)
+                || rawLength <= 0
+                || rawLength != Math.floor(rawLength)) {
+            throw new CalculatorException(
+                    "Vector length must be a positive integer.");
+        }
+
+        if (rawLength > stack_.size() / 2) {
+            throw new CalculatorException(
+                    "Not enough values on the stack for two vectors.");
+        }
+
+        int length = (int) rawLength;
+        double[] secondVector = new double[length];
+
+        for (int i = length - 1; i >= 0; i--) {
+            secondVector[i] = pop();
+        }
+
+        double result = 0.0;
+        for (int i = length - 1; i >= 0; i--) {
+            result += pop() * secondVector[i];
+        }
+
+        return result;
     }
 
 }

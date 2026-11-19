@@ -54,6 +54,25 @@ public class ParserTest {
 
         verifyNoMoreInteractions(cal);
     }
+    @Test
+    public void testDotProductOfTwoElementVectorsFromXml() throws Exception {
+        Calculator calc = new at.campus02.swe.logic.CalculatorImpl();
+        Parser parser = new Parser(calc);
 
+        double result = parser.parse(
+                new File("src/test/resources/dotproduct-length-two.xml"));
 
+        org.junit.Assert.assertEquals(14.0, result, 1e-9);
+    }
+
+    @Test
+    public void testDotProductOfOneElementVectorsFromXml() throws Exception {
+        Calculator calc = new at.campus02.swe.logic.CalculatorImpl();
+        Parser parser = new Parser(calc);
+
+        double result = parser.parse(
+                new File("src/test/resources/dotproduct-length-one.xml"));
+
+        org.junit.Assert.assertEquals(6.0, result, 1e-9);
+    }
 }
