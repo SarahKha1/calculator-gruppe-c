@@ -21,10 +21,10 @@ Vollständige Namen und die Zuordnung zu den GitHub-Benutzernamen meldet ihr in 
 
 Status: noch nicht freigegeben, in Arbeit oder erledigt.
 
-| Aufgabe | Status   | Issues / Pull Requests | Neue Tests bzw. CI-Nachweis |
-| --- |----------| --- | --- |
-| 1: Modulo | erledigt | noch ausfüllen | noch ausfüllen |
-| 2: E2E-Tests | noch ausfüllen | noch ausfüllen | noch ausfüllen |
+| Aufgabe | Status         | Issues / Pull Requests | Neue Tests bzw. CI-Nachweis |
+| --- |----------------| --- | --- |
+| 1: Modulo | erledigt       | noch ausfüllen | noch ausfüllen |
+| 2: E2E-Tests | erledigt       | noch ausfüllen | EndToEndTest.java mit testAddition und testDivision, zwei neue XML-Testdateien (e2eTest01.xml, e2eTest02.xml) |
 | 3: sin/cos | noch ausfüllen | noch ausfüllen | noch ausfüllen |
 | 4: Skalarprodukt | noch ausfüllen | noch ausfüllen | noch ausfüllen |
 | CI | noch ausfüllen | noch ausfüllen | noch ausfüllen |
@@ -41,6 +41,6 @@ Noch ausfüllen.
 Was funktioniert noch nicht oder weicht von der Aufgabenstellung ab?
 Wenn keine Probleme bekannt sind, schreibt ausdrücklich „Keine bekannt“.
 
-Noch ausfüllen.
+Keine bekannt. 
 
 Release-Link, Tag und vollständige Commit-ID nach dem Release in Moodle eintragen.
