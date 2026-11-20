@@ -13,27 +13,41 @@ public class CalculatorImpl implements Calculator {
     @Override
     public double perform(Operation op) throws CalculatorException {
 
+        if (op == Operation.sin) {
+            double a = pop();
+            return Math.sin(a);
+        }
+
+        if (op == Operation.cos) {
+            double a = pop();
+            return Math.cos(a);
+        }
+
         double b = pop();
         double a = pop();
 
         switch (op) {
             case add:
                 return a + b;
+
             case sub:
                 return a - b;
+
             case div:
                 double c = a / b;
                 if (Double.isInfinite(c))
                     throw new CalculatorException("Division by zero");
                 return c;
+
             case mul:
                 return a * b;
 
             case mod:
-                if (b==0)
+                if (b == 0)
                     throw new CalculatorException("Modulo by zero");
                 return a % b;
         }
+
         return 0;
     }
 

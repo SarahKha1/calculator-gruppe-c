@@ -40,4 +40,25 @@ public class EndToEndTest {
 
         assertEquals(4.0, result, 0.001);
     }
+    @Test
+    public void testSinEndToEnd() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        Parser parser = new Parser(calc);
+
+        double result = parser.parse(
+                new File("src/test/resources/e2eSin.xml"));
+
+        assertEquals(0.0, result, 1e-9);
+    }
+
+    @Test
+    public void testCosEndToEnd() throws Exception {
+        Calculator calc = new CalculatorImpl();
+        Parser parser = new Parser(calc);
+
+        double result = parser.parse(
+                new File("src/test/resources/e2eCos.xml"));
+
+        assertEquals(1.0, result, 1e-9);
+    }
 }

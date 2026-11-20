@@ -133,5 +133,70 @@ public class CalculatorTest {
         calc.perform(Operation.mod);
     }
 
+    @Test(expected = CalculatorException.class)
+    public void testModuloWithOneNumber() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(7);
+
+        calc.perform(Operation.mod);
+    }
+    @Test
+    public void testSinZero() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(0);
+
+        double result = calc.perform(Operation.sin);
+
+        assertEquals(0.0, result, 1e-9);
+    }
+
+    @Test
+    public void testCosZero() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(0);
+
+        double result = calc.perform(Operation.cos);
+
+        assertEquals(1.0, result, 1e-9);
+    }
+
+    @Test
+    public void testSinPiHalf() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(Math.PI / 2);
+
+        double result = calc.perform(Operation.sin);
+
+        assertEquals(1.0, result, 1e-9);
+    }
+
+    @Test
+    public void testCosPi() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(Math.PI);
+
+        double result = calc.perform(Operation.cos);
+
+        assertEquals(-1.0, result, 1e-9);
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testSinWithEmptyStack() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.perform(Operation.sin);
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testCosWithEmptyStack() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.perform(Operation.cos);
+    }
 
 }
