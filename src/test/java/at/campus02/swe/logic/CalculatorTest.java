@@ -133,5 +133,13 @@ public class CalculatorTest {
         calc.perform(Operation.mod);
     }
 
+    @Test(expected = CalculatorException.class)
+    public void testModuloWithOneNumber() throws Exception {
+        Calculator calc = new CalculatorImpl();
+
+        calc.push(7);
+
+        calc.perform(Operation.mod);
+    }
 
 }
